@@ -5,10 +5,28 @@ class MyContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("Container"),
+      height: 500,
+      padding: EdgeInsets.all(8),
+      child: Column(
+        children: [
+          Text(
+            "Container",
+            style: TextStyle(fontSize: 28),
+          ),
+          Divider(
+            color: Colors.black,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Divider(
+            color: Colors.black,
+          ),
+        ],
+      ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: Color.fromARGB(1, 23, 123, 45),
+        color: Colors.amber.shade100,
+        borderRadius: BorderRadius.only(bottomRight: Radius.circular(80)),
       ),
       margin: EdgeInsets.all(8),
     );
